@@ -1,10 +1,9 @@
-from flask import (
-    Flask,
-    render_template
-)
+import connexion
+
+from flask import render_template
 
 # TODO: Create the application instance
-app = Flask(__name__, template_folder='templates')
+app = connexion.App(__name__, specification_dir='../')
 
 @app.route('/')
 def home():
